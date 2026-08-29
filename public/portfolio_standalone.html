@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AX Engineer Portfolio | Jung Hee-jin</title>
+  <meta name="description" content="데이터 전처리 및 AI 모델 커스텀 최적화와 워크플로우 자동화 설계를 결합한 실전형 AX 엔지니어 정희진 포트폴리오">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <!-- Tailwind CSS CDN for Standalone execution -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Pretendard', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #F8FAFC;
+      color: #0F172A;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    @media print {
+      @page {
+        margin: 12mm 14mm;
+        size: A4 portrait;
+      }
+      body {
+        background-color: #FFFFFF !important;
+        color: #0F172A !important;
+        font-size: 10pt !important;
+        line-height: 1.4 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-card {
+        border: 1px solid #CBD5E1 !important;
+        box-shadow: none !important;
+        background-color: #FFFFFF !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+        margin-bottom: 12px !important;
+      }
+      .print-header-banner {
+        display: block !important;
+        border-bottom: 2px solid #0F172A !important;
+        padding-bottom: 8px !important;
+        margin-bottom: 14px !important;
+      }
+    }
+    @media screen {
+      .print-header-banner {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-blue-600/15 selection:text-blue-600">
+
+  <!-- Sticky Navbar (Screen Only) -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 no-print">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#about" class="flex items-center gap-2 font-bold text-slate-900 text-sm">
+        <span class="w-7 h-7 rounded-lg bg-slate-900 text-white flex items-center justify-center font-mono text-xs font-bold">JH</span>
+        <span>정희진 <span class="text-xs text-slate-400 font-mono font-normal">/ Jung Hee-jin</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-1 bg-slate-100 p-1 rounded-full text-xs font-medium">
+        <a href="#about" class="px-3 py-1 rounded-full text-slate-700 hover:text-blue-600">About</a>
+        <a href="#skills" class="px-3 py-1 rounded-full text-slate-700 hover:text-blue-600">Core Skills</a>
+        <a href="#projects" class="px-3 py-1 rounded-full text-slate-700 hover:text-blue-600">Projects</a>
+        <a href="#experience" class="px-3 py-1 rounded-full text-slate-700 hover:text-blue-600">Experience</a>
+        <a href="#contact" class="px-3 py-1 rounded-full text-slate-700 hover:text-blue-600">Contact</a>
+      </nav>
+      <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-slate-900 hover:bg-blue-600 text-white text-xs font-semibold shadow-xs transition-colors cursor-pointer">
+        <span>🖨️ PDF 인쇄 / 저장</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 pt-24 pb-16 space-y-12">
+    
+    <!-- Print-only banner -->
+    <div class="print-header-banner">
+      <div class="flex justify-between items-start">
+        <div>
+          <h1 class="text-2xl font-bold text-slate-900">정희진 (Jung Hee-jin)</h1>
+          <p class="text-sm font-semibold text-blue-700 mt-0.5">AI · 업무 자동화(AX) 엔지니어</p>
+          <p class="text-xs text-slate-800 font-semibold mt-0.5">단순 반복을 넘어, 데이터 정합성을 보장하는 AX 솔루션을 구축합니다.</p>
+          <p class="text-xs text-slate-600 mt-0.5">안녕하세요, 정희진입니다. 시스템 로직에 대한 깊은 이해와 AI·Python 구현력을 바탕으로 오류 없이 안정적인 기업 업무 자동화 파이프라인을 설계합니다.</p>
+        </div>
+        <div class="text-right text-xs text-slate-500 font-mono">
+          <p>Email: el00043171@gmail.com</p>
+          <p>Location: Seoul, Korea</p>
+          <p>Credentials: SQLD, ADsP</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 01. Hero & About -->
+    <section id="about" class="space-y-4">
+      <div class="no-print inline-flex flex-wrap items-center gap-2">
+        <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200">
+          ✨ AI · 업무 자동화(AX) 엔지니어
+        </span>
+        <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200">
+          🛡️ 현업 시스템 ⟷ 신기술(AI·자동화) 가교
+        </span>
+        <span class="px-2.5 py-1 rounded-full text-[11px] font-mono bg-emerald-50 text-emerald-700 border border-emerald-200">
+          Target: 채용 담당자 & IT/AX 기술 면접관
+        </span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        단순 반복을 넘어, <br>
+        <span class="text-blue-600">데이터 정합성을 보장하는 AX 솔루션</span>을 구축합니다.
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-3xl">
+        안녕하세요, <strong>정희진</strong>입니다. <br>
+        시스템 로직에 대한 깊은 이해와 AI·Python 구현력을 바탕으로 오류 없이 안정적인 기업 업무 자동화 파이프라인을 설계합니다.
+      </p>
+
+      <!-- Highlight Box -->
+      <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs print-card space-y-1.5">
+        <h2 class="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+          <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-mono text-[10px]">AX 핵심 포지셔닝</span>
+          현업 시스템과 신기술을 가장 빠르게 연결하는 엔지니어
+        </h2>
+        <p class="text-xs text-slate-700 leading-relaxed">
+          연구자 관점에 머무르지 않고, <strong>현업 시스템과 신기술(AI·자동화)을 가장 빠르게 연결해 주는 사람</strong>으로서 오류 없이 안정적인 기업 맞춤형 업무 자동화 파이프라인을 실현합니다.
+        </p>
+      </div>
+
+      <!-- Key Metrics -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
+        <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs print-card">
+          <div class="text-[11px] text-amber-700 font-bold font-mono">🏆 2025 캡스톤디자인</div>
+          <div class="text-xl font-extrabold font-mono text-slate-900 mt-1">금상 수상</div>
+          <div class="text-[11px] text-slate-500">뇌종양 의료 영상 분할</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs print-card">
+          <div class="text-[11px] text-blue-700 font-bold font-mono">⚡ AI 커스텀 모델링</div>
+          <div class="text-lg font-extrabold font-mono text-slate-900 mt-1">Custom Trainer</div>
+          <div class="text-[11px] text-slate-500">손실함수 튜닝 & 증강 주도</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs print-card">
+          <div class="text-[11px] text-emerald-700 font-bold font-mono">🛡️ 프로세스 자동화</div>
+          <div class="text-lg font-extrabold font-mono text-slate-900 mt-1">비즈니스 로직 설계</div>
+          <div class="text-[11px] text-slate-500">중복 방지 & 권한 제어 자동화</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs print-card">
+          <div class="text-[11px] text-indigo-700 font-bold font-mono">📜 공인 데이터 자격</div>
+          <div class="text-lg font-extrabold font-mono text-slate-900 mt-1">SQLD + ADsP</div>
+          <div class="text-[11px] text-slate-500">데이터 모델링 & 분석 자격</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. Core Skills -->
+    <section id="skills" class="space-y-6 pt-6 border-t border-slate-200">
+      <div>
+        <span class="text-xs font-mono font-bold text-blue-600">02. CORE SKILLS</span>
+        <h2 class="text-2xl font-bold text-slate-900">보유 기술 스택 및 자격 역량</h2>
+        <p class="text-xs text-slate-500 mt-1">데이터 전처리·AI 모델 최적화 및 워크플로우 자동화를 뒷받침하는 핵심 기술 스택입니다.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs print-card space-y-3">
+          <h3 class="text-sm font-bold text-slate-900">⚡ AI Optimization & Data Modeling</h3>
+          <p class="text-xs text-slate-500">비정형 데이터 전처리, 데이터 증강 파이프라인 및 커스텀 트레이너 최적화</p>
+          <div class="space-y-2 text-xs">
+            <div class="p-2 bg-slate-50 rounded-lg"><strong>Custom Trainer & Loss Function</strong>: 의료 영상 데이터 특성에 맞춘 손실함수 커스텀 튜닝 및 학습 파이프라인 최적화</div>
+            <div class="p-2 bg-slate-50 rounded-lg"><strong>Data Augmentation Pipeline</strong>: 데이터 불균형 및 과소 분할 극복을 위한 특화 증강 기법 및 전처리 설계</div>
+            <div class="p-2 bg-slate-50 rounded-lg"><strong>Python & PyTorch / nnU-Net v2</strong>: 딥러닝 모델 아키텍처 학습 제어 및 원격 GPU 체크포인트 학습 체계 구축</div>
+          </div>
+        </div>
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs print-card space-y-3">
+          <h3 class="text-sm font-bold text-slate-900">🛡️ Workflow & Process Automation</h3>
+          <p class="text-xs text-slate-500">업무 프로세스 자동화 및 정합성을 보장하는 비즈니스 검증 로직</p>
+          <div class="space-y-2 text-xs">
+            <div class="p-2 bg-slate-50 rounded-lg"><strong>Validation & State Control</strong>: 중복 요청 사전 차단 유효성 검증, 역할 기반 권한 제어 및 상태 전이 로직 설계</div>
+            <div class="p-2 bg-slate-50 rounded-lg"><strong>Data Flow & REST API</strong>: 시스템 간 데이터 전달 인터페이스 설계 및 맞춤형 동적 폼 규격 처리</div>
+            <div class="p-2 bg-slate-50 rounded-lg"><strong>Database & Data Modeling</strong>: 관계형 데이터 모델링, 데이터 매핑 및 맞춤형 필터링 조회 로직 구현</div>
+          </div>
+        </div>
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs print-card space-y-3">
+          <h3 class="text-sm font-bold text-slate-900">📜 Data Analysis & Qualifications</h3>
+          <p class="text-xs text-slate-500">공인 데이터 분석 자격 및 버전 관리 협업 역량</p>
+          <div class="space-y-2 text-xs">
+            <div class="p-2 bg-slate-50 rounded-lg"><strong>SQLD (SQL개발자)</strong>: 한국데이터산업진흥원 공인 자격 (데이터 모델링 및 SQL 최적 활용)</div>
+            <div class="p-2 bg-slate-50 rounded-lg"><strong>ADsP (데이터분석 준전문가)</strong>: 한국데이터산업진흥원 공인 자격 (데이터 분석 기획 및 데이터 마이닝)</div>
+            <div class="p-2 bg-slate-50 rounded-lg"><strong>Git & Linux CLI</strong>: 버전 관리 협업 워크플로우 및 리눅스 기반 원격 개발 환경 제어</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. Projects -->
+    <section id="projects" class="space-y-6 pt-6 border-t border-slate-200">
+      <div>
+        <span class="text-xs font-mono font-bold text-blue-600">03. PROJECTS & ENGINEERING CASES</span>
+        <h2 class="text-2xl font-bold text-slate-900">실전 프로젝트 및 구현 사례</h2>
+        <p class="text-xs text-slate-500 mt-1">AI 모델 커스텀 최적화와 워크플로우 자동화 설계를 통해 도출한 핵심 구현 로직과 AX 연계 역량입니다.</p>
+      </div>
+
+      <!-- Project 1: AI Brain Tumor -->
+      <div class="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200 shadow-xs print-card space-y-5">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
+          <div>
+            <span class="text-xs font-mono font-bold text-blue-600">AI 모델링 & 데이터 파이프라인 최적화</span>
+            <h3 class="text-xl font-bold text-slate-900">뇌종양 의료 영상 분할 AI 모델 개발 (2025 캡스톤디자인)</h3>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-900 border border-amber-200 font-mono">
+              🏆 캡스톤디자인 경진대회 '금상' 수상
+            </span>
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-900 border border-blue-200 font-mono">
+              ⚡ Custom Trainer 구현 & 데이터 증강 주도
+            </span>
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-900 border border-indigo-200 font-mono">
+              📈 팀 앙상블 연계 (Dice 0.8926 달성)
+            </span>
+          </div>
+        </div>
+
+        <div class="text-xs font-mono text-slate-600 flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 bg-slate-100 rounded-lg border border-slate-200">Python</span>
+          <span class="px-2.5 py-1 bg-slate-100 rounded-lg border border-slate-200">PyTorch</span>
+          <span class="px-2.5 py-1 bg-slate-100 rounded-lg border border-slate-200">nnU-Net v2</span>
+          <span class="px-2.5 py-1 bg-slate-100 rounded-lg border border-slate-200">Custom Trainer</span>
+          <span class="px-2.5 py-1 bg-slate-100 rounded-lg border border-slate-200">Data Augmentation</span>
+          <span class="px-2.5 py-1 bg-slate-100 rounded-lg border border-slate-200">Linux/CUDA</span>
+        </div>
+
+        <div class="space-y-2 text-xs">
+          <h4 class="font-bold text-slate-700 uppercase tracking-wider font-mono">담당 역할 및 핵심 구현 로직</h4>
+          <div class="p-3 bg-slate-50 rounded-xl space-y-2 border border-slate-200/70">
+            <p><strong>• [커스텀 트레이너 직접 구현 및 손실함수 최적화 - 본인 주도]:</strong> 의료 영상(MRI)의 고유한 불균형 특성에 맞춰 손실함수 가중치 및 학습 스케줄러를 제어하는 Custom Trainer를 직접 개발하여 단일 모델의 수렴 안정성 확보</p>
+            <p><strong>• [특화 데이터 증강 파이프라인 설계 - 본인 주도]:</strong> 종양의 얇은 경계면과 미세 구조 손실을 방지하기 위해 노이즈, 회전, 스케일링 등 도메인 특화 증강 기법을 체계적으로 적용하여 데이터 다양성 및 모델 일반화 성능 극대화</p>
+            <p><strong>• [환경 표준화 및 원격 GPU 체크포인트 학습 체계 구축 - 본인 주도]:</strong> OS 라이브러리 의존성 충돌을 가상환경 재구성을 통해 해결하고, 장시간 원격 GPU 학습 중 중단을 방지하는 체크포인트 자동 저장/복구 파이프라인 수립</p>
+            <p><strong>• [팀 3D+2D 앙상블 파이프라인 연계 및 금상 수상 성과 달성 - 팀 협업]:</strong> 직접 구축한 커스텀 트레이너 기반 모델의 고도화된 예측력을 팀원의 앙상블 파이프라인과 유기적으로 결합하여 최종 분할 정밀도(Dice Score 0.8926) 달성 및 경진대회 금상 수상</p>
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-900 text-slate-200 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <span class="text-blue-300 font-medium">✨ AX 연계: 비정형 데이터의 노이즈와 불균형 병목을 진단하고, 맞춤형 전처리·증강 및 커스텀 트레이너 최적화로 모델 성능 기초체력을 극대화하는 실전형 AI 엔지니어링 역량</span>
+          <a href="#" onclick="alert('2025 캡스톤디자인 공식 연구 보고서: Custom Trainer & 데이터 증강 주도 및 팀 앙상블 연계 성과 요약본 열람 가능'); return false;" class="no-print inline-flex items-center gap-1 text-blue-400 font-semibold underline underline-offset-2 shrink-0">
+            📄 연구 보고서/논문 다운로드
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2: SnapBook Workflow Automation -->
+      <div class="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200 shadow-xs print-card space-y-5">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
+          <div>
+            <span class="text-xs font-mono font-bold text-indigo-600">워크플로우 자동화 & 비즈니스 로직 설계</span>
+            <h3 class="text-xl font-bold text-slate-900">SnapBook (인스타그램·채팅 기반 1:1 통합 예약/문의 서비스)</h3>
+            <p class="text-xs text-slate-600 mt-1">💡 <strong>서비스 개요:</strong> 네이버 예약 및 카카오톡으로 분산된 예약과 문의를 전용 1:1 채팅방에서 원스톱으로 처리하는 플랫폼</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 shrink-0">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-900 border border-indigo-200 font-mono">
+              ⚡ 예약 워크플로우 자동화
+            </span>
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-900 border border-emerald-200 font-mono">
+              🛡️ 중복 예약 방지 & 권한 검증
+            </span>
+          </div>
+        </div>
+
+        <div class="text-xs font-mono text-slate-600 flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 bg-slate-100 rounded-lg border border-slate-200">Java</span>
+          <span class="px-2.5 py-1 bg-slate-100 rounded-lg border border-slate-200">Spring Boot</span>
+          <span class="px-2.5 py-1 bg-slate-100 rounded-lg border border-slate-200">JPA</span>
+          <span class="px-2.5 py-1 bg-slate-100 rounded-lg border border-slate-200">MySQL</span>
+          <span class="px-2.5 py-1 bg-slate-100 rounded-lg border border-slate-200">REST API</span>
+        </div>
+
+        <div class="space-y-2 text-xs">
+          <h4 class="font-bold text-slate-700 uppercase tracking-wider font-mono">담당 역할 및 핵심 구현 로직</h4>
+          <div class="p-3 bg-slate-50 rounded-xl space-y-2 border border-slate-200/70">
+            <p><strong>• [예약 생성 및 유효성 검증 자동화]:</strong> 동일 시간대 중복 예약 발생을 사전에 차단하는 검증 로직을 구현하고, 매장별 설정 폼 규격에 맞춘 예약 데이터 전송 및 처리</p>
+            <p><strong>• [상태 관리 및 권한 검증 로직]:</strong> 점주(OWNER) 권한 검증을 통과해야만 상태 전이가 이루어지도록 제어하고, 전용 1:1 채팅방 내 실시간 예약 상태 카드와 연동</p>
+            <p><strong>• [동적 예약 폼 자동 생성 및 관리]:</strong> 신규 샵 생성 시 기본 규격의 예약 폼 자동 생성 로직 개발, 샵별 특성에 맞춘 맞춤형 폼 조회 및 실시간 수정 기능 구현</p>
+            <p><strong>• [데이터 필터링 및 분리형 조회]:</strong> 특정 샵의 예약 불가 시간대를 실시간으로 확인하는 기능 및 채팅방(Shop-Customer 매핑)을 매개체로 한 맞춤형 데이터 필터링 조회 구현</p>
+            <p><strong>• [엔티티 및 계층형 구조 설계]:</strong> Controller - Service - Repository 계층을 분리하고, 엔티티 관계를 정밀하게 정의하여 비즈니스 데이터 흐름의 안정성 확보</p>
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-900 text-slate-200 text-xs">
+          <span class="text-blue-300 font-medium">✨ AX 연계: 시스템 간 데이터 흐름을 정밀하게 제어하고, 분산된 수작업 워크플로우를 하나로 통합하여 예외와 누락을 사전에 차단하는 프로세스 자동화 설계 역량</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. Experience -->
+    <section id="experience" class="space-y-6 pt-6 border-t border-slate-200">
+      <div>
+        <span class="text-xs font-mono font-bold text-blue-600">04. EXPERIENCE & COACHING</span>
+        <h2 class="text-2xl font-bold text-slate-900">협업 & 코칭 경험</h2>
+      </div>
+
+      <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-xs print-card space-y-4">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-bold text-slate-900">중·고등학생 대상 프로그래밍 언어(C/Python) 및 알고리즘 지도</h3>
+          <span class="px-3 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200 font-mono">
+            상생형 코칭
+          </span>
+        </div>
+        <div class="space-y-1.5 text-xs text-slate-700">
+          <p>• 비전공자 및 학습자 시선에서 추상적 문법과 논리적 흐름의 병목 지점을 파악</p>
+          <p>• 직관적인 실습 예제와 단계별 학습 지도를 통해 프로그래밍 진입장벽 해소</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-900 text-slate-200 text-xs">
+          <strong class="text-blue-400">✨ AX 연계 강점:</strong> IT가 낯선 현업 부서의 고충을 경청하고 눈높이에 맞춘 AX 솔루션을 제공하는 '상생의 동반자' 역량
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. Contact (No inquiry form, developer information only) -->
+    <section id="contact" class="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-xs print-card space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="space-y-1">
+          <span class="text-xs font-mono text-blue-600 font-semibold">05. DEVELOPER INFO</span>
+          <h3 class="text-xl font-bold text-slate-900">정희진 (Jung Hee-jin)</h3>
+          <p class="text-xs text-slate-600">AI · 업무 자동화(AX) 엔지니어</p>
+          <p class="text-xs font-mono text-slate-700 pt-1">📧 el00043171@gmail.com | 📍 Seoul, Republic of Korea</p>
+        </div>
+        <div class="no-print flex items-center gap-2">
+          <button onclick="navigator.clipboard.writeText('el00043171@gmail.com'); alert('이메일 주소가 복사되었습니다!')" class="px-4 py-2 bg-blue-50 text-blue-700 text-xs font-bold rounded-xl border border-blue-200 hover:bg-blue-100 cursor-pointer">
+            이메일 복사
+          </button>
+          <button onclick="window.print()" class="px-4 py-2 bg-slate-900 text-white text-xs font-bold rounded-xl hover:bg-slate-800 cursor-pointer">
+            PDF 인쇄 / 저장
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-6 border-t border-slate-200 text-center text-xs text-slate-400 no-print">
+    © 2026 Jung Hee-jin. All rights reserved.
+  </footer>
+
+</body>
+</html>

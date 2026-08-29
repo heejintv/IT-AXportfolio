@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Pretendard', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    background-color: #F8FAFC;
+    color: #0F172A;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Print Stylesheet for A4 Output */
+@media print {
+  @page {
+    margin: 12mm 14mm;
+    size: A4 portrait;
+  }
+
+  body {
+    background-color: #FFFFFF !important;
+    color: #0F172A !important;
+    font-size: 11pt !important;
+    line-height: 1.45 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide screen-only components */
+  .no-print,
+  nav,
+  header,
+  .floating-print-btn,
+  .modal-overlay,
+  button:not(.print-keep),
+  .toast-container {
+    display: none !important;
+  }
+
+  /* Reset layout constraints for paper */
+  .print-page-break {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  .print-avoid-break {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Ensure card borders and contrast look crisp on paper */
+  .print-card {
+    border: 1px solid #CBD5E1 !important;
+    box-shadow: none !important;
+    background-color: #FFFFFF !important;
+    margin-bottom: 12px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Print Header for Document */
+  .print-header-banner {
+    display: block !important;
+    border-bottom: 2px solid #0F172A !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 16px !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #0F172A !important;
+  }
+}
+
+@media screen {
+  .print-header-banner {
+    display: none;
+  }
+}
+
